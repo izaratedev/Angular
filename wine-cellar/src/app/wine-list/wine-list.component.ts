@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Wine } from './Wine'
 
 @Component({
   selector: 'app-wine-list',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class WineListComponent {
 
-  wine = {
+  wine: Wine = {
     name: "Alamos",
     type: "Malbec",
     price: 5000,
