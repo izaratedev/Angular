@@ -1,6 +1,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th>Imagen</th>
             <th>Nombre</th>
             <th>Tipo</th>
             <th>Precio</th>
@@ -9,18 +10,21 @@
     </thead>
     <tbody>
         <tr>
+            <td><img width="120" height="120" [src]="wine.image" [alt]="wine.image"/></td>
             <td>{{wine.name}}</td>
             <td>{{wine.type}}</td>
             <td>{{wine.price}}</td>
             <td>{{wine.stock}}</td>
         </tr>
         <tr>
+            <td></td>
             <td>Cordero con piel de lobo</td>
             <td>Malbec</td>
             <td>3500</td>
             <td>50</td>
         </tr>
         <tr>
+            <td></td>
             <td>San Felipe</td>
             <td>Cabernet Sauvignon</td>
             <td>6000</td>

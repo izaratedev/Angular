@@ -12,6 +12,7 @@ export class WineListComponent {
     name: "Alamos",
     type: "Malbec",
     price: 5000,
-    stock: 20
+    stock: 20,
+    image: 'assets/img/alamos.jpg'
   }
 }
