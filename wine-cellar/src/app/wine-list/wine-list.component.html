@@ -10,26 +10,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let wine of wines" [ngClass]="{'clearance' : wine.clearance}">
             <td><img width="120" height="120" [src]="wine.image" [alt]="wine.image"/></td>
             <td>{{wine.name}}</td>
             <td>{{wine.type}}</td>
-            <td>{{wine.price}}</td>
-            <td>{{wine.stock}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Cordero con piel de lobo</td>
-            <td>Malbec</td>
-            <td>3500</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>San Felipe</td>
-            <td>Cabernet Sauvignon</td>
-            <td>6000</td>
-            <td>25</td>
+            <td>{{wine.price | currency}}</td>
+            <td><span class="badge badge-warning" *ngIf="wine.stock == 0">SIN STOCK</span></td>
         </tr>
     </tbody>
 </table>

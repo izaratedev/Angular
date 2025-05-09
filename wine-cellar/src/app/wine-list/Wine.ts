@@ -5,5 +5,5 @@ export interface Wine {
     price: number;
     stock: number;
     image: string;
-
+    clearance: boolean;
 }
