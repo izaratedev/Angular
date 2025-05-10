@@ -10,7 +10,7 @@ import { Wine } from './Wine'
 export class WineListComponent {
 
   wines: Wine[] = [
-    {
+  {
     name: "Alamos",
     type: "Malbec",
     price: 5000,
