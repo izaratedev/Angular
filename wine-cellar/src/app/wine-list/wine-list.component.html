@@ -10,12 +10,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let wine of wines" [ngClass]="{'clearance' : wine.clearance}">
-            <td><img width="120" height="120" [src]="wine.image" [alt]="wine.image"/></td>
-            <td>{{wine.name}}</td>
-            <td>{{wine.type}}</td>
-            <td>{{wine.price | currency}}</td>
-            <td><span class="badge badge-warning" *ngIf="wine.stock == 0">SIN STOCK</span></td>
-        </tr>
+        <!--ng-container es como una especie de div invisible de angular, que despues no se reenderiza-->
+        <!--el *ngIf dice que si el arreglo de vinos es mayor que 0 los imprime, sino llama al ng-template #empty -->
+        <ng-container *ngIf="wines && wines.length > 0; else empty">
+            <tr *ngFor="let wine of wines" [ngClass]="{'clearance' : wine.clearance}">
+                <td><img width="120" height="120" [src]="wine.image" [alt]="wine.image"/></td>
+                <td>{{wine.name}}</td>
+                <td>{{wine.type}}</td>
+                <td>{{wine.price | currency}}</td>
+                <td><span class="badge badge-warning" *ngIf="wine.stock == 0">SIN STOCK</span></td>
+            </tr>
+        </ng-container>
+        <ng-template #empty>
+            <tr>
+                <td colspan="4">No hay vinos para mostrar.</td>
+            </tr>
+        </ng-template>
     </tbody>
 </table>
