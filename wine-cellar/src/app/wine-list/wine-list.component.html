@@ -7,12 +7,16 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
+        <!--Dentro de este for se genera el ambito(Scope) donde se puede utilizar la variable wine de tipo Wine-->
         @for (wine of wines; track wine.name){
         <tr>
-            <td><img width="120" height="120" [src]="wine.image" [alt]="wine.image"/></td>
+            <td>
+                <img class="img-thumbnail" width="100" [src]="wine.image" [alt]="wine.image"/>
+            </td>
             <td>{{wine.name}}</td>
             <td>{{wine.type}}</td>
             <td>{{wine.price | currency}}</td>
@@ -21,6 +25,12 @@
             }@else {
                 <td><span class="badge badge-warning text-dark">SIN STOCK</span></td>
             }
+            <td width="100">
+                <button class="btn btn-primary btn-sm" (click)="downQuantity(wine)">-</button>
+                {{wine.quantity}}
+                <button class="btn btn-primary btn-sm" (click)="upQuantity(wine)">+</button>
+            </td>
+
         </tr>
         } @empty {
              <tr>

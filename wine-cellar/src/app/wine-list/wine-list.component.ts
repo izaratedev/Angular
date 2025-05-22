@@ -14,9 +14,10 @@ export class WineListComponent {
     name: "Alamos",
     type: "Malbec",
     price: 5000,
-    stock: 20,
+    stock: 5,
     image: 'assets/img/alamos.jpg',
     clearance: false,
+    quantity: 0,
     },
   {
     name: "Cordero con piel de lobo",
@@ -25,6 +26,7 @@ export class WineListComponent {
     stock: 50,
     image: 'assets/img/cordero-con-piel-de-lobo.jpg',
     clearance: true,
+    quantity: 0,
   },
   {
     name: "San Felipe",
@@ -33,6 +35,7 @@ export class WineListComponent {
     stock: 25,
     image: 'assets/img/san-felipe.jpg',
     clearance: false,
+    quantity: 0,
 
   },
    {
@@ -42,6 +45,17 @@ export class WineListComponent {
     stock: 0,
     image: 'assets/img/rutini.jpg',
     clearance: false,
+    quantity: 0,
   }
   ]
+  // poniendole : Wine le indica el tipo que es wine
+  upQuantity(wine: Wine): void {
+    if(wine.quantity < wine.stock)
+      wine.quantity++;
+  }
+
+    downQuantity(wine: Wine): void {
+      if( wine.quantity > 0)
+        wine.quantity--;
+  }
 }
