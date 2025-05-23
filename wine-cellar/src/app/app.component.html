@@ -7,24 +7,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Other</a>
+          <!--Le agregamos la directiva, para poder navegar a la direccion que queremos ir cuando se seleccione contact. 
+          La directiva routerlink nos pide un arreglo porque los ruteos pueden ser mas complejos, en el medio pueden ir ids, y despues otra cosa, etc.  
+          Esto reemplaza el href, el href sigue andando, se puede utilizar pero no activa el ruteo de angular(hace una navegacion normal), no hace partial render(no hay SPA), me va a cambiar de pagina-->
+          <a class="nav-link" [routerLink]="['/about']">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container">
-  <div class="row">
-    <div class="col-8">
-      <app-wine-list></app-wine-list>
-    </div>
-    <div class="col-4">Carrito de compras</div>
-  </div>
+  <!--Al colocar el tag router-outlet carga todo como le dijimos en el routing module, lo que le diga en la url-->
+  <router-outlet></router-outlet>
 </div>
-<footer> {{title}} 2025</footer>
+<footer class="text-center bg-dark"> 
+  <span class="text-light">{{title}} 2025</span>
+</footer>
