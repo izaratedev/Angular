@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { WinecellarAboutComponent } from './winecellar-about/winecellar-about.component';
 import { WinecellarWinesComponent } from './winecellar-wines/winecellar-wines.component';
 import { CartComponent } from './cart/cart.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CartComponent } from './cart/cart.component';
     WinecellarAboutComponent,
     WinecellarWinesComponent,
     CartComponent,
+    InputIntegerComponent,
   ],
   imports: [
     BrowserModule,

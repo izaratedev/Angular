@@ -13,7 +13,7 @@ export class WineListComponent {
   {
     name: "Alamos",
     type: "Malbec",
-    price: 5000,
+    price: 500,
     stock: 5,
     image: 'assets/img/alamos.jpg',
     clearance: false,
@@ -22,8 +22,8 @@ export class WineListComponent {
   {
     name: "Cordero con piel de lobo",
     type: "Malbec",
-    price: 3500,
-    stock: 50,
+    price: 350,
+    stock: 5,
     image: 'assets/img/cordero-con-piel-de-lobo.jpg',
     clearance: true,
     quantity: 0,
@@ -31,8 +31,8 @@ export class WineListComponent {
   {
     name: "San Felipe",
     type: "Cabernet Sauvignon",
-    price: 6000,
-    stock: 25,
+    price: 600,
+    stock: 5,
     image: 'assets/img/san-felipe.jpg',
     clearance: false,
     quantity: 0,
@@ -41,28 +41,16 @@ export class WineListComponent {
    {
     name: "Rutini",
     type: "Malbec",
-    price: 12000,
+    price: 120,
     stock: 0,
     image: 'assets/img/rutini.jpg',
     clearance: false,
     quantity: 0,
   }
   ]
-  // poniendole : Wine le indica el tipo que es wine
-  upQuantity(wine: Wine): void {
-    if(wine.quantity < wine.stock)
-      wine.quantity++;
-  }
 
-  downQuantity(wine: Wine): void {
-      if( wine.quantity > 0)
-        wine.quantity--;
+  maxReached(m: string){
+    alert(m);
   }
-  //Dentro del event esta todo lo que hizo el usuario. El target se refiere a todo el input que estamos editando. 
-  //Si el keyCode esta entre un 0 y 9 esta bien, sino hay que tirar el event.preventDefault()
-  /*
-  changeQuantity(event: any, wine: Wine): void {
-    console.log(event);
-  }
-  */
+ 
 }

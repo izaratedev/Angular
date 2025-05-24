@@ -22,15 +22,16 @@
             <td>{{wine.price | currency}}</td>
             @if(wine.stock > 0) { 
                 <td>{{wine.stock}}</td>
+                <td>
+                    <app-input-integer [(quantity)]="wine.quantity" [max]="wine.stock" (maxReached)="maxReached($event)"></app-input-integer>
+                </td>
             }@else {
                 <td><span class="badge badge-warning text-dark">SIN STOCK</span></td>
             }
-            <td width="100">
-                <button class="btn btn-primary btn-sm" (click)="downQuantity(wine)">-</button>
-                <input type="text" [(ngModel)]="wine.quantity"> <!--(keyup)="changeQuantity($event, wine)"  Esto no me anduvo-->
-                <button class="btn btn-primary btn-sm" (click)="upQuantity(wine)">+</button>
-            </td>
-
+            <!--Decimo que el wine del hijo va a ser wine del padre, y usamos los [] para decirle que es un dato que le estamos mandando al componente hijo
+                Estamos conectando un componente padre con un componente hijo-->
+           
+            
         </tr>
         } @empty {
              <tr>
