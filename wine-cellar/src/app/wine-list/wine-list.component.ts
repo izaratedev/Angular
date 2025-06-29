@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Wine } from './Wine'
+import { WineCartService } from '../wine-cart.service';
 
 @Component({
   selector: 'app-wine-list',
@@ -48,6 +49,15 @@ export class WineListComponent {
     quantity: 0,
   }
   ]
+
+  constructor(private cart: WineCartService) {
+  }
+
+  addToCart(wine: Wine): void {
+  
+    this.cart.addToCart(wine)
+  }
+
 
   maxReached(m: string){
     alert(m);

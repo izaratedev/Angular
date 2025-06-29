@@ -7,13 +7,14 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Cantidad</th>
             <th>Compra</th>
         </tr>
     </thead>
     <tbody>
         <!--Dentro de este for se genera el ambito(Scope) donde se puede utilizar la variable wine de tipo Wine-->
         @for (wine of wines; track wine.name){
-        <tr>
+        <tr [ngClass]="{'clearance': wine.clearance}">
             <td>
                 <img class="img-thumbnail" width="100" [src]="wine.image" [alt]="wine.image"/>
             </td>
@@ -24,6 +25,9 @@
                 <td>{{wine.stock}}</td>
                 <td>
                     <app-input-integer [(quantity)]="wine.quantity" [max]="wine.stock" (maxReached)="maxReached($event)"></app-input-integer>
+                </td>
+                <td>
+                    <button class="btn btn-success" (click)="addToCart(wine)">Comprar</button>
                 </td>
             }@else {
                 <td><span class="badge badge-warning text-dark">SIN STOCK</span></td>
