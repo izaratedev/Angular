@@ -20,7 +20,7 @@ export class InputIntegerComponent {
   @Output()
   quantityChange: EventEmitter<number> = new EventEmitter<number>();
 
-  //Variable para emitir cada vez que el stock llega al maximo
+  //Variable para emitir el evento  cada vez que el stock llega al maximo
   @Output()
   maxReached: EventEmitter<string> = new EventEmitter<string>();
 
@@ -28,7 +28,8 @@ export class InputIntegerComponent {
   upQuantity(): void {
     if(this.quantity < this.max){
       this.quantity++;
-      //El emit junto con el Output hace funcionen los  () 
+      //El emit junto con el Output hace funcionen los  ()
+      // al .emit() siempre hay que decirle que tiene que cambiar, sino no sabe 
       this.quantityChange.emit(this.quantity);
     }else {
       this.maxReached.emit("Se alcanzo el max");
@@ -49,5 +50,4 @@ export class InputIntegerComponent {
     console.log(event.key);
   }
   */
-
 }
