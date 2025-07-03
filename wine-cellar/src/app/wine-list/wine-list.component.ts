@@ -55,7 +55,13 @@ export class WineListComponent {
 
   addToCart(wine: Wine): void {
   
-    this.cart.addToCart(wine)
+    this.cart.addToCart(wine);
+    //Al stock le descuento el wine quantity
+    wine.stock -= wine.quantity;  
+    //Al quantoty lo reinicio a 0 para la siguiente compra. Esto lo tengo que controlar con el cliente
+    wine.quantity = 0;
+
+    //Si el stock llega a 0, se esconde el input.
   }
 
 

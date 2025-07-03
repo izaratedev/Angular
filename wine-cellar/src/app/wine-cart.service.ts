@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Wine } from './wine-list/Wine';
+import { BehaviorSubject } from 'rxjs';
 
 /**
 * Este servicio maneja la logica del carrito
@@ -13,23 +14,25 @@ import { Wine } from './wine-list/Wine';
 export class WineCartService {
 
   
-  cartList: Wine[] = [];
+  cartList: BehaviorSubject<Wine[]> = new BehaviorSubject([]);
 
   constructor() { }
 
   addToCart(wine: Wine) {
     //Esta funcion me va a controlar si ya hay algun elemento igual agregado
+    //al find le pasamos una arrow function, le pasamos el elemento que estamos iterando y el comparador va afuera. El wine es el que recibi por parametro
     let item = this.cartList.find((v1) => v1.name == wine.name);
 
     //Esto me previene que si agrega la cerveza 2 veces no me la agregue
+    //Esto dice si no encontro item, agregalo
     if(!item) {
-      // ...wine (Esto te clona el objeto)
+      // ...wine (Esto te clona el objeto) -> esto se llama notacion funcional y object destractoring. se puede utizar asi creo un objeto {le pongo lo que quiero, ...agrego lo que viene}
       this.cartList.push({... wine});
+      //si ya estaba me eleva el quantity de ese producto
     } else {
       item.quantity += wine.quantity;
     }
-
-    console.log(this.cartList)
+    //Logica del addToCart
   }
 
   
