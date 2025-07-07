@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {About} from './About'
 
 @Component({
   selector: 'app-winecellar-about',
@@ -8,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class WinecellarAboutComponent {
 
+  Abouts: About[] = [
+    {
+      email: "info@winecellar.com",
+      phoneNumber: "+54 9 249 123-4567",
+    },
+  ]
+
+  fondo: string = "assets/img/wine-cellar.png";
 }

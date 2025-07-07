@@ -1,0 +1,22 @@
+h1, h2, h3 {
+    text-transform: capitalize;
+}
+div.principal {
+    display: flex;
+    margin-bottom: 10%;
+}
+
+div.principal div {
+    width: 50%;
+}
+
+div.izq {
+    justify-content: center;
+}
+
+div.der img{
+    max-width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
