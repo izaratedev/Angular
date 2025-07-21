@@ -23,7 +23,7 @@ El proyecto incluye los siguientes componentes y servicios:
 - **DNI**: 39.341.989  
 - **Email**: [zarateivan648@gmail.com](mailto:zarateivan648@gmail.com)  
 - **Sede TUDAI**: Tandil  
-- **StackBlitz**: [Enlace_StackBlitz](#)
+- **StackBlitz**: [Enlace_StackBlitz](https://stackblitz.com/~/github.com/izaratedev/Angular)
 
 ---
 
