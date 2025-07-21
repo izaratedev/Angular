@@ -43,6 +43,7 @@ export class InputIntegerComponent {
         this.quantityChange.emit(this.quantity);
       }
   }
+
   //Dentro del event esta todo lo que hizo el usuario. El target se refiere a todo el input que estamos editando. 
   //Si el keyCode esta entre un 0 y 9 esta bien, sino hay que tirar el event.preventDefault()
   /*

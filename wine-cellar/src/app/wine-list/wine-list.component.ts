@@ -64,7 +64,6 @@ export class WineListComponent {
     //Si el stock llega a 0, se esconde el input.
   }
 
-
   maxReached(m: string){
     alert(m);
   }

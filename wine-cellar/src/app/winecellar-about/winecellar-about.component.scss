@@ -1,22 +1,36 @@
-h1, h2, h3 {
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+}
+
+h1, ul {
     text-transform: capitalize;
 }
+
+ul {
+    font-size: 25px;
+    font-weight: 500;
+}
+
 div.principal {
     display: flex;
-    margin-bottom: 10%;
+    margin-bottom: 13%;
 }
 
 div.principal div {
-    width: 50%;
+    width: 100%;
 }
 
 div.izq {
     justify-content: center;
+    text-align: center;
 }
 
 div.der img{
-    max-width: 100%;
+    max-width: 60%;
     height: 100%;
     opacity: 0.9;
+    border-radius: 20px;
 }
 
