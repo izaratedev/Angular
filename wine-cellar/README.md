@@ -1,59 +1,29 @@
-# WineCellar
+# 🍷 Wine Cellar
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+Proyecto desarrollado como parte de la carrera TUDAI. La temática abordada es un **carrito de compras** para una tienda de vinos denominada *Wine Cellar*.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🧩 Componentes y Servicios
 
-```bash
-ng serve
-```
+El proyecto incluye los siguientes componentes y servicios:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **`wine-list`**: Muestra los productos disponibles para la venta, incluyendo marca y precio.
+- **`winecellar-about`**: Sección breve con las formas de contacto de la tienda (email y teléfono).
+- **`cart`**: Componente donde se almacenan las elecciones del cliente.
+- **`winecellar-wines`**: Componente padre que engloba toda la lógica de la venta. Contiene `wine-list` y `cart`.
+- **`input-integer`**: Componente usado dentro de `wine-list` para registrar la cantidad deseada de cada producto.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 👨‍🎓 Datos del Alumno
 
-```bash
-ng generate component component-name
-```
+- **Apellido**: Zárate  
+- **Nombre**: Iván  
+- **DNI**: 39.341.989  
+- **Email**: [zarateivan648@gmail.com](mailto:zarateivan648@gmail.com)  
+- **Sede TUDAI**: Tandil  
+- **StackBlitz**: [Enlace_StackBlitz](#)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
